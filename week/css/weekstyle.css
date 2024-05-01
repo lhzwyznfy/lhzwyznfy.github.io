@@ -1,0 +1,136 @@
+/*固定在右上角的5个圆*/
+.month-circles {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+  }
+
+.circlemonth {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*时间间隔切换*/
+.timeinterval {
+    position: fixed;
+    top: 20px;
+    right: 750px;
+    display: flex;
+    gap: 10px;
+  }
+
+.time-interval {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/*一周的一排可视化*/
+.weekcontainer {
+    display: flex;
+    /*justify-content: space-between;*/
+    gap: 3.5%;
+    margin-top:5%;
+    width: 100%;
+}
+
+.weekvis {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*三个柱状图*/
+.chart {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.bar:hover { fill: #eb5c6e; }
+
+.round:hover { fill: #0055ca; border-color: #ffffff;}
+
+.svgchart {
+    overflow: visible;
+}
+.chartzhouji {
+    display: inline-block;
+    vertical-align: auto;
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.All{
+    /*vertical-align: auto;*/
+    position: relative;
+    width: 1600px;
+    height: 600px;
+    margin: 0px auto 0;
+    top:60px;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    /*background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
+    background: rgba(211, 211, 211, 0.2);/* Light white background */
+    
+    border-radius: 8px;
+    backdrop-filter: blur(30px); /* Apply blur effect */
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+    /*animation: blurAnimation 5s infinite alternate;*/
+}
+
+.Allregulation{
+    position: relative;
+    width: 1200px;
+    height: 400px;
+    margin: 20px auto 0;
+    top:60px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: rgba(211,211, 211, 0.1); /* Light white background */
+    border-radius: 8px;
+    backdrop-filter: blur(100px); /* Apply blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: blurAnimation 3s infinite alternate;
+}
+
+/*用这个做呼吸调控*/
+@keyframes blurAnimation {
+    0% {
+        backdrop-filter: blur(0px);
+    }
+    100% {
+        backdrop-filter: blur(10px);
+    }
+}
+/*粒子效果*/
