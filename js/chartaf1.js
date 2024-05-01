@@ -139,9 +139,6 @@ async function drawChart(dates) {
         }
     }
     HRbaseline = (baseline/dataset1.length).toFixed(2);
-    console.log("HRbaseline:"+HRbaseline);
-    console.log("现在我们有了每秒对应的HR和TEMP,以及这一秒有无SCR")
-    console.log(dataset1)
     //以上是基本的dataset1--------------
 
 
@@ -277,8 +274,7 @@ async function drawChart(dates) {
     const C = dateParsetest((parseInt(strA)-1)+":58");
     const D = dateParsetest(parseInt(strB)+":58");
     dataobj1 = res.filter((d=>dateAccessorH(d)>C && dateAccessorH(d)<D));
-    console.log("dataobj1为筛选时间后的数组:")
-    console.log(dataobj1);
+
 
     //定义画布
     const width = 1200
