@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><!--语言是英语//bg#e9eae7-->
+<meta charset="utf-8"> 
+
+<head>
+  <link rel="stylesheet" href="./css/stylesaf.css" />
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="week/css/weekstyle.css">
+
+  <script src="d3.min.js" charset="utf-8"></script>
+  <script src="https://dl.ifanr.cn/hydrogen/sdk/sdk-web-latest.js"></script>
+  <script src="d3-tip.js"></script>
+
+  <title>round</title>
+
+  <style type="text/css">
+  </style>
+<!--#5e4b2c-->
+</head>
+
+
+<body  class="bodyvis">
+  <!--date selector-->
+  <header> 
+    <div class="dateEmoVis">  <!--date selector-->
+      <h1 id="EmoVis" onclick="Logout()">EmoVis</h1><!--&emsp;&emsp;-->
+
+      <!--顶部导航-->
+      <div class="footer-left">
+          <ul>
+              <li><a href="year/year.html">年</a></li>
+              <li><a href="month/month.html">月</a></li>
+              <li><a href="week/week.html">周</a></li>
+              <li><a href="viz.html">日</a></li>
+              <li><a href="society/society.html">社区</a></li>
+          </ul>
+      </div>
+    </div>
+
+      
+    <!--img src="img/back.png" alt="back" class="back" width="30px" height="30px" onclick="Week()"-->
+    <!--div class="footer-right">
+      <div class="friend">
+        <a href="emoregulation.html"><img src="img/emoregulation.png" alt="" /></a>
+      </div>
+    </div-->
+    
+    <button id="emoregulation"><a href="emoregulation.html">个人放松</a></button>
+
+    <button id="uploadBtn">上传数据</button>
+    <input type="file" id="fileInput" accept=".csv" style="display: none;"/>
+</header>
+
+<div class="carousel-container banner nybanner">
+  <div class="carousel-slide">
+      <img src="img/banner01.jpg" alt="Image 1">
+      <img src="img/banner02.jpg" alt="Image 2">
+      <img src="img/banner03.jpg" alt="Image 3">
+  </div>
+  <button id="prevBtn" class="btnEmoVis">Prev</button>
+  <button id="nextBtn" class="btnEmoVis">Next</button>
+</div>
+
+<script src="js/banner.js"></script>
+
+<div class="container-intro" >
+		<div class="news-content scroll-style">
+				<ul>
+          <li data-content="article" data-href="index.html">
+					  <div class="news-title">
+						EmoVis Intro
+					  </div>
+					  <span class="pull-right">2024-05</span>
+          </li>
+
+					<li data-content="article" data-href="index.html">
+					  <div class="news-title">
+						EmoVis Canvas
+					  </div>
+					  <span class="pull-right">2024-05</span>
+          </li>
+
+					<li data-content="article" data-href="index.html">
+					  <div class="news-title">
+						EmoVis Notes
+					  </div>
+					  <span class="pull-right">2024-05</span>
+          </li>
+				</ul>
+		</div>
+</div>
+
+
+<script>
+  //登出
+    function Logout(){
+      window.location.href = 'index.html';
+    }
+  //登出
+
+  //读取上传的文件
+  document.getElementById('uploadBtn').addEventListener('click', function() {
+    /*document.getElementById('fileInput').click(); // 模拟点击文件输入*/
+    window.alert("目前暂无法接入后台，可以先参考预先导入的数据")
+    window.location.href = 'viz.html';
+  });
+
+  /*document.getElementById('fileInput').addEventListener('change', function(event) {
+      const file = event.target.files[0]; // 获取文件
+      if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+              const content = e.target.result;
+              const rows = content.split('\n'); // 分割每一行
+              const array = rows.map(row => row.split(',')); // 将每行按逗号分割为数组
+              console.log(array); // 在控制台打印数组
+          };
+          reader.readAsText(file); // 读取文件为文本
+      }
+
+      window.alert("目前暂无法接入后台，可以先参考预先导入的数据")
+      window.location.href = 'viz.html';
+
+
+
+  });*/
+  //读取上传的文件
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<head>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/stylesaf.css">
+  <link rel="stylesheet" href="css/year.css">
+  <link rel="stylesheet" href="../week/css/weekstyle.css">
+  <link rel="stylesheet" href="../month/css/monthstyle.css">
+
+  <script src="../d3.min.js" charset="utf-8"></script>
+  <script src="https://dl.ifanr.cn/hydrogen/sdk/sdk-web-latest.js"></script>
+  <script src="../d3-tip.js"></script>
+
+  <title>YEAR</title>
+
+<!--#5e4b2c-->
+</head>
+
+<script src="js/year.js"></script>
+
+
+<body>
+  <header>
+      <!--img src="../img/back.png" alt="back" id="back" onclick="Society()"-->
+      <!--img src="../img/back.png" alt="back" id="back" onclick="Year()"-->
+      <div class="dateEmoVis">  <!--date selector-->
+        <h1 id="EmoVis" onclick="BacktoEmoVis()">EmoVis</h1><!--&emsp;&emsp;-->
+  
+        <div class="footer-left">
+          <ul>
+              <li><a href="../year/year.html">年</a></li>
+              <li><a href="../month/month.html">月</a></li>
+              <li><a href="../week/week.html">周</a></li>
+              <li><a href="../viz.html">日</a></li>
+              <li><a href="../society/society.html">社区</a></li>
+          </ul>
+        </div>
+      </div>
+  </header>
+
+<div class="All">
+    <div class="yearcontainer">
+        <div class="yearvis">
+        <div id="yearwrapper0" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper1" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper2" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper3" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper4" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper5" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper6" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper7" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper8" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper9" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper10" z-index="1" ></div>
+        </div>
+        <div class="yearvis">
+            <div id="yearwrapper11" z-index="1" ></div>
+        </div>
+
+    </div>  
+
+
+
+    <!--div id="chartYEAR" class="YEARRecord"><h3>年记</h3><p id="YEARAnno">...</p></div-->
+
+    <div id="chartYEAR" class="YEARRecord" >
+      <p>
+        <strong onclick="OnClick(event)">记录</strong>
+        <button class="btn btn-danger btn-block" id="stop-btn" onclick="StopVocal(event)">Off</button>
+        <button class="btn btn-danger btn-block" id="start-btn" onclick="StartVocal(event)">On</button>
+        <hr>
+      </p>
+      <textarea id="anno" value="..." ></textarea><!--onchange="Summary(event)"-->
+      <p id="instructions">Press The Start Button To Start Recognition</p>
+    </div>
+
+    <div id="chartthisyear" class="chartthisyear"></div>
+
+
+</div>
+
+<div class="dateselect">  <!--date selector-->
+  <div>
+    <h2 id="date-display">选择一个日期</h2><!--&emsp;&emsp;-->
+  </div>
+  <div class="date-selector">
+      <input type="date" id="datePicker" onchange="updateYear()">
+  </div>
+</div>
+
+<script>
+   drawChartYear(2024,5,1);
+
+  //回到主页
+    function BacktoEmoVis(){
+      window.location.href = '../EmoVis.html';
+    }
+//回到主页
+</script>
+</body>
+</html>
+    

@@ -1,0 +1,48 @@
+/*一年的一排可视化*/
+.yearcontainer {
+    display: flex;
+    gap: 2%;
+    margin-top:10px;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.yearvis {
+    margin-top:2px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*年*/
+.YEARRecord {
+    position: absolute;
+    width: 18%;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+    right:10px;
+    top:10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+/*一月的图表*/
+.chartthisyear {
+    position: absolute;
+    right:10px;
+    margin: 20px;
+    padding: 20px;
+    top:360px;
+    width: 18%;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
