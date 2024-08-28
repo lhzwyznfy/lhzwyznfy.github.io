@@ -121,8 +121,8 @@
     </div>
 
     <div class="right">
-      <div id="chakan">简要查看</div>
-      <div id="fansi">深度反思</div>
+      <div id="chakan">笔记</div>
+      <div id="fansi">画布</div>
     </div>
   </div>
 
@@ -166,7 +166,7 @@ const chakan = d3.select("#chakan")
       d3.select(event.currentTarget)
         .transition()
         .duration(300)
-        .style("background","#c3ffe3")
+        .style("background","blue")
         .style("border","white")
         .style("color","white")
     })
@@ -175,9 +175,9 @@ const chakan = d3.select("#chakan")
         .transition()
         .duration(300)
         .attr("opacity","0.5")
-        .style("background","white")
+        .style("background","grey")
         .style("border","#0055CA")
-        .style("color","#c3ffe3")
+        .style("color","blue")
 })
 .on("click",function(event,d){
   categ = 0;
@@ -200,8 +200,8 @@ const fansi = d3.select("#fansi")
   d3.select(event.currentTarget)
         .transition()
         .duration(300)
-        .style("background","#c3ffe3")
-        .style("border","#c3ffe3")
+        .style("background","blue")
+        .style("border","blue")
         .style("color","white")
 })
 /*.on("click",function(event,d){
@@ -466,27 +466,27 @@ function giveSuggestion() {
 
     if (stressLevel < 20) {
         suggestions = [
-            'You seem very relaxed. Keep up the good work!',
-            'Great job maintaining low stress levels!',
-            'Everything seems to be under control. Enjoy your day!'
+            '你看起来很放松。继续努力！',
+            '在保持愉悦方面做得很好！',
+            '一切似乎都在控制之中。祝你一天愉快！'
         ];
     } else if (stressLevel < 50) {
         suggestions = [
-            'You have a moderate level of stress. Consider taking a short break.',
-            'Try some deep breathing exercises to relax.',
-            'A quick walk can help you clear your mind.'
+            '你的压力适中。考虑休息一下。',
+            '试着做一些深呼吸练习来放松。',
+            '短暂的散步可以帮助你理清思路。'
         ];
     } else if (stressLevel < 80) {
         suggestions = [
-            'Your stress level is getting high. Try to take a longer break.',
-            'Consider talking to a friend or family member about your stress.',
-            'Engage in a hobby or activity you enjoy to relax.'
+            '你的压力越来越大。试着多休息一会儿。',
+            '考虑和朋友或家人谈谈你的压力。',
+            '从事你喜欢的爱好或活动来放松。'
         ];
     } else {
         suggestions = [
-            'Your stress level is very high. It\'s important to take action.',
-            'Consider seeking professional help if your stress remains high.',
-            'Make sure to take care of your physical and mental health.'
+            '你的压力很大。采取行动很重要',
+            '如果你的压力仍然很大，可以考虑寻求专业帮助。',
+            '一定要照顾好自己的身心健康。'
         ];
     }
 

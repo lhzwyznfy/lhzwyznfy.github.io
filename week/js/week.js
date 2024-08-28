@@ -15,13 +15,13 @@ function TAGSInput(event){
   tagcontext=event.target.value;
 }
 
-var color1 = {"lowlowstress": "#0e51a2",
-"lowstress": "#5271ff",
-"middle": "#e3f2a5",
-"highstress": "#fcea6b",
-"highhighstress":"#ffba3b",
+var color1 = {"lowlowstress": "#E0F7FA",
+"lowstress": "#B2EBF2",
+"middle": "#80DEEA",
+"highstress": "#4DD0E1",
+"highhighstress":"#26C6DA",
 "weeknone":"white",
-"weekselected":"#ffba3b"};
+"weekselected":"#26C6DA"};
 
 
 function updateWeek() {

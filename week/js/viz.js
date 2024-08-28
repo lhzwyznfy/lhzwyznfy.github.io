@@ -294,7 +294,7 @@ async function calcueveryday(dates){
             })
             .attr("fill", function(d){
                 if(m==0 || m==6){return color1["highhighstress"]}
-                else{return "#0055ca"}
+                else{return "white"}
             })
             .attr("font-size","2em")
             .on("click",function(event){
@@ -357,7 +357,7 @@ async function calcueveryday(dates){
              .join("rect")
              .attr("class", "bar")
              .attr("id",(d, i) => `${valueKey}-bar-${i}`)
-             .attr("fill","#0055ca")
+             .attr("fill","#26C6DA")
              .attr("x", d => x(d[valueKey]))
              .attr("width", x.bandwidth())
              .attr("y", d => y(Number(d[valueKey])))

@@ -1,4 +1,7 @@
 /*固定在右上角的5个圆*/
+body{
+    background-color: #000000;
+}
 .month-circles {
     position: fixed;
     top: 20px;
@@ -104,8 +107,9 @@
     /*background: rgba(211, 211, 211, 0.2);/* Light white background */
     
     border-radius: 8px;
-    backdrop-filter: blur(30px); /* Apply blur effect */
-    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+    /*backdrop-filter: blur(30px); /* Apply blur effect */
+    background: rgba(255, 255, 255, 0); 
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /*animation: blurAnimation 5s infinite alternate;*/
 }
 
@@ -120,8 +124,8 @@
     background: rgba(211,211, 211, 0.1); /* Light white background */
     border-radius: 8px;
     backdrop-filter: blur(100px); /* Apply blur effect */
-    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: blurAnimation 3s infinite alternate;*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: blurAnimation 3s infinite alternate;
 }
 
 /*用这个做呼吸调控*/
